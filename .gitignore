@@ -1,0 +1,4 @@
+*/*
+!*/flag
+!*/resources/
+.gdb_history
