@@ -3,6 +3,7 @@ Cette exécutable est composé d'une fonction main qui va allouer de 8 octets po
 Avec le premier strcpy on va pouvoir overflow et modifier la valeur stockée par `ptr_to_buffer2`, pour qu'elle pointe autre chose que `buffer2` mais par exemple l'adresse de puts pour la remplacer via le deuxième strcpy par l'adresse de `m`. Et lorsque puts sera appele à la fin du main. Il n'appellera pas puts de la libc mais la fonction `m`.
 
 ![Ghidra Level 7, fonction main et m](./ghidra_level7.png)
+
 Donc en premier lieu, on recupère l'adresse de puts (0x08049928)
 ```
 $ objdump -R ./level7
