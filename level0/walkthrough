@@ -8,4 +8,4 @@ On ouvre le programme dans ghidra et dans la représentation en C, on comprend q
 <br/>
 Si la comparaison est bonne alors il exécute tous simplement `/bin/sh`. Et nous avons accès à l'utilisateur `level1` et récupérons son mot de passe dans `/home/user/level1/.pass`
 
-![ghidra](./ghidra.png)
+![ghidra](./resources/ghidra.png)

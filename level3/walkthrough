@@ -1,6 +1,6 @@
 # Level 3
 
-![Ghidra level3, fonction main et v](./ghidra-level3.png)
+![Ghidra level3, fonction main et v](./resources/ghidra-level3.png)
 
 Nous avons une variable globale qui est `m`, cette variable est par défaut sur 0. L'objectif est de la modifier pour appeler le `system()`.
 

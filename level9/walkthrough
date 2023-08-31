@@ -4,7 +4,7 @@ On va donc utiliser notre shellcode du level2 et le mettre dans l'argument du pr
 
 *Note: memcpy utilise strlen sur le paramètre, faire attention à ne pas mettre de `\x00` dans le shellcode.*
 
-![ghidra main, setAnnotation method in N Class](./ghidra_level9.png)
+![ghidra main, setAnnotation method in N Class](./resources/ghidra_level9.png)
 
 On va essayer de faire un `NOP Slide`, ce qui est de remplire un bout de la stack avec des `NOP` et suivi de notre shellcode directement dans l'environnement. Ainsi, on va pouvoir overflow la stack et tomber sur notre shell.
 

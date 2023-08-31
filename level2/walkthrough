@@ -9,7 +9,7 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaJaaaaaaaa
 Segmentation fault (core dumped)
 ```
 Lorsque nous inspectons avec gdb ou ghidra, nous trouvons la fonction principale `main` et `p` qui est appelé. La fonction `p` inclut un appel à `gets()` qui est vulnérable au buffer overflow.
-![Ghidra level02, fonction main et p](./ghidra-level2.png)
+![Ghidra level02, fonction main et p](./resources/ghidra-level2.png)
 
 On peut trouver l'offset via un tool comme [EIP offset tool](https://projects.jason-rush.com/tools/buffer-overflow-eip-offset-string-generator/),
 ```
