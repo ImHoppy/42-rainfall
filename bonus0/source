@@ -1,49 +1,39 @@
 
+//original name of readLine was p
 void readLine(char *dst,char *prefix)
 {
-  char *line;
-  char buf [4104];
+	char *line;
+	char buf[4104];
 
-  puts(prefix);
-  read(0,buf,4096);
-  line = strchr(buf,10);
-  *line = '\0';
-  strncpy(dst,buf,20);
-  return;
+	puts(prefix);
+	read(0, buf, 4096);
+	line = strchr(buf, 10);
+	*line = '\0';
+	strncpy(dst, buf, 20);
+	return;
 }
 
 void pp(char *buffer)
 {
-  uint uVar1;
-  char *pcVar2;
-  byte bVar3;
-  char buffer1 [20];
-  char buffer2 [20];
-  char charVar;
+	unsigned int n;
+	char buffer1[20];
+	char buffer2[20];
 
-  bVar3 = 0;
-  readLine(buffer1," - ");
-  readLine(buffer2," - ");
-  strcpy(buffer,buffer1);
-  uVar1 = 0xffffffff;
-  pcVar2 = buffer;
-  do {
-    if (uVar1 == 0) break;
-    uVar1 = uVar1 - 1;
-    charVar = *pcVar2;
-    pcVar2 = pcVar2 + (uint)bVar3 * -2 + 1;
-  } while (charVar != '\0');
-  *(char *)(buffer + (~uVar1 - 1)) = 32;
-  strcat(buffer,buffer2);
-  return;
+	readLine(buffer1, " - ");
+	readLine(buffer2, " - ");
+	strcpy(buffer, buffer1);
+	n = strlen(buffer);
+	buffer[n] = 32;
+	strcat(buffer, buffer2);
+	return;
 }
 
 
 int main(void)
 {
-  char buffer [54];
+	char buffer [54];
 
-  pp(buffer);
-  puts(buffer);
-  return 0;
+	pp(buffer);
+	puts(buffer);
+	return 0;
 }
